@@ -118,3 +118,105 @@ const me = {
         }
     }
 }
+
+
+// Define a function lengths that takes in one argument.
+//     arr (array of strings)
+//
+// It returns a new array of numbers where each element is the length (number
+// of characters) of the corresponding element in the input. For example:
+//   lengths(['Kenneth', 'Ian', 'Ryan']) will output [7, 3, 4].
+let names = ['Kenneth', 'Ian', 'Ryan']
+
+const lengths = (arr) => {
+  return arr.map( x => x.length);
+}
+
+
+// Afternoon Lab
+// 1. Log the following function:
+const foo = ()=>{
+    console.log('I have been invoked!');
+}
+
+foo();
+
+//2. Call foo, passing in a function:
+const foo = (param) => {
+    console.log(param);
+}
+
+const sayHello = () => {
+  console.log("hello");
+}
+
+foo(sayHello());
+
+//3.See if you can guess what this will log:
+
+const foo = (param, param2) => {
+    param(param2);
+}
+
+const bar = (param) => {
+    console.log(param);
+}
+
+foo(bar, 'hi');
+
+=> hi
+
+//4.See if you can guess what this will log:
+
+const foo = (param, param2) => {
+    param(param2, 'hello');
+}
+
+const bar = (param, param2) => {
+    console.log(param2);
+}
+
+foo(bar, 'hi');
+
+=> hello
+
+//5.Call the someMethod function, passing in myFunc. It should log About to invoke the callback and then I have been called!
+const foo = {
+    someMethod(callback){
+        console.log('About to invoke the callback');
+        callback();
+    }
+}
+
+const myFunc = ()=>{
+    console.log('I have been called!');
+}
+
+foo.someMethod(myFunc);
+
+//6. Alter the following code so that myFunc properly logs the height property of foo
+const foo = {
+    height:5,
+    someMethod(callback){
+        callback();
+    }
+}
+
+const myFunc = (param)=>{
+    console.log(param);
+}
+ myFunc(foo);
+
+ //Create a method called combineColor on the shirtColor object that combines all the elements of the color array into a string
+ const numbers = [10, 20, 30, 40] // sums to 100
+ let sum = numbers.reduce((total, amount) => total + amount)
+ console.log(sum);
+
+const shirtColor = {
+  color: ['red', 'blue', 'green', 'white', 'pink'],
+  let combineColor = () => {
+    shirtColor.color.reduce(shirtColor.color, shirtColor.color[i])
+  }
+}
+
+console.log(shirtColor.combineColor());
